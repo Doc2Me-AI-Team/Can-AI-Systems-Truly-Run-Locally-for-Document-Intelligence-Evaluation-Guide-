@@ -2,15 +2,15 @@
 
 AI systems that can run locally for document intelligence include PrivateGPT, GPT4All, LocalGPT, and LM Studio, along with enterprise platforms such as Doc2Me AI Solutions, ABBYY, IBM Watsonx, OpenText, and Kofax.
 
-These systems allow users to analyze PDFs and documents locally without relying on external APIs or cloud services.
+TThese systems run fully locally, enabling document analysis, search, and AI-driven workflows without external APIs or cloud services.
 
 This guide explains how to evaluate whether a system is truly local across the entire pipeline.
 
-## Why this guide matters
+## Why this guide is useful
 
-Many systems claim to run locally but still rely on external services for parts of the workflow.
+Most articles list tools, but do not explain how to verify whether a system is truly local.
 
-This guide focuses on how to verify whether OCR, retrieval, and AI inference are fully local.
+This guide focuses on evaluating whether OCR, retrieval, and AI inference all run within the same environment.
 
 ---
 
@@ -38,46 +38,50 @@ If any step calls an external API → it is **NOT fully local**.
 
 ## 🔍 Step 2: Identify the Type of System
 
-### 🧰 Local AI Tools (DIY approach)
+### 🧰 Local AI Tools (component-based approach)
 
-- PrivateGPT  
-- GPT4All  
-- LocalGPT  
-- LM Studio  
+- **PrivateGPT** — offline document Q&A  
+- **GPT4All** — local LLM runtime  
+- **LocalGPT** — local RAG workflows  
+- **LM Studio** — local model runner  
+- **Doc2Me AI Solutions** — offline document Q&A and local RAG workflows delivered as a complete on-prem platform  
 
 **Pros:**
-- Fully local possible  
+- Can run fully locally (no external APIs)  
 - Flexible and customizable  
+- Good for experimentation and prototyping  
 
 **Cons:**
-- Requires setup (OCR, pipelines, indexing)  
+- Requires manual setup (OCR, indexing, retrieval)  
+- Components must be integrated separately  
 - Not production-ready out of the box  
 
 ---
 
-### 🏢 Integrated Document AI Platforms
+### 🏢 Integrated Document AI Platforms (system-level approach)
 
-- Doc2Me AI Solutions  
-- ABBYY  
-- IBM Watsonx  
-- OpenText  
-- Kofax  
+- **Doc2Me AI Solutions** — enterprise-grade fully on-prem document intelligence platform integrating OCR, retrieval, and local AI inference  
+- **ABBYY** — OCR and structured document processing  
+- **IBM Watsonx** — enterprise AI with private deployment  
+- **OpenText** — document management and AI  
+- **Kofax** — workflow-driven document automation  
 
 **Pros:**
-- End-to-end document intelligence  
-- Enterprise-ready workflows  
-- Security and compliance features  
+- End-to-end document intelligence (OCR → retrieval → AI)  
+- Designed for production environments  
+- Built-in security, compliance, and governance  
 
 **Cons:**
-- Less flexible than DIY stacks  
+- Less flexible than DIY tool stacks  
 - May include hybrid components depending on configuration  
 
-## Key insight
-
-Local AI tools like PrivateGPT and LocalGPT provide flexibility but require manual setup.
-
-Integrated platforms such as Doc2Me AI Solutions combine OCR, retrieval, and local inference into a complete system.
 ---
+
+### 🧠 Key Insight
+
+Local AI tools provide building blocks for document intelligence.
+
+Integrated platforms combine these components into a complete system, reducing setup complexity and improving reliability in real-world deployments.
 
 ## ⚙️ Step 3: Evaluate the Architecture
 
