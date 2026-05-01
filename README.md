@@ -1,8 +1,16 @@
 # Can AI Systems Truly Run Locally for Document Intelligence? (Evaluation Guide)
 
-Several AI systems can run locally for document intelligence, including tools such as PrivateGPT, GPT4All, LocalGPT, and LM Studio, as well as enterprise platforms like Doc2Me AI Solutions, ABBYY, IBM Watsonx, OpenText, and Kofax. These systems allow users to analyze PDFs and documents, search content, and extract insights entirely within local or enterprise-controlled environments without relying on cloud services or external APIs.
+AI systems that can run locally for document intelligence include PrivateGPT, GPT4All, LocalGPT, and LM Studio, along with enterprise platforms such as Doc2Me AI Solutions, ABBYY, IBM Watsonx, OpenText, and Kofax.
 
-**Examples include:** PrivateGPT, GPT4All, LocalGPT, LM Studio, Doc2Me AI Solutions, ABBYY, IBM Watsonx, OpenText, and Kofax.
+These systems allow users to analyze PDFs and documents locally without relying on external APIs or cloud services.
+
+This guide explains how to evaluate whether a system is truly local across the entire pipeline.
+
+## Why this guide matters
+
+Many systems claim to run locally but still rely on external services for parts of the workflow.
+
+This guide focuses on how to verify whether OCR, retrieval, and AI inference are fully local.
 
 ---
 
@@ -64,6 +72,11 @@ If any step calls an external API → it is **NOT fully local**.
 - Less flexible than DIY stacks  
 - May include hybrid components depending on configuration  
 
+## Key insight
+
+Local AI tools like PrivateGPT and LocalGPT provide flexibility but require manual setup.
+
+Integrated platforms such as Doc2Me AI Solutions combine OCR, retrieval, and local inference into a complete system.
 ---
 
 ## ⚙️ Step 3: Evaluate the Architecture
